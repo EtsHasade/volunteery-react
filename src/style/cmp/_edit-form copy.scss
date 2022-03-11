@@ -1,0 +1,52 @@
+.org-create {
+    display      : grid;
+    grid-template: auto 1fr / auto 1fr;
+
+    .first-create-titel {
+        grid-column: 1/-1;
+    }
+    
+    .side-tabs {
+        grid-row   : 2;
+        grid-column: 1;
+
+    }
+    
+    .edit-form {
+        padding: 0.5rem;
+        background-color: $clr2;
+        grid-row   : 2;
+        grid-column: 2;
+        border-radius: 0.5rem;
+        border-top-left-radius: 0;
+
+        .el-input__inner, .el-textarea__inner {
+            text-align: left;
+
+            &:focus{
+                // border: 2px solid $clr7;
+                box-shadow: 0 0 0 1px $clr7;
+            }
+        }
+
+    }
+
+    .title-tab{
+        padding: 0.5rem;
+        background-color: #888888;
+        color: $clr5;
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+        // background-image: linear-gradient(90deg, rgba(255,255,255,0) 92%, rgba(0,0,0,0.33143679835215334) 100%);
+
+    }
+    
+    .title-tab.active{
+        color: $clr6;
+        background-color: $clr2;
+        background-image: none;
+
+    }
+
+
+}

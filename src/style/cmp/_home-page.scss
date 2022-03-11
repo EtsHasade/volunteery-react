@@ -1,0 +1,68 @@
+.home-page {
+    .hero-img {
+        height: 95vh;
+        object-fit: cover;
+        object-position: top;
+        margin-bottom: 2rem;
+    }
+    .articles-row {
+        &.main-a {
+            margin-top: 30px;
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include for-small-narrow-layout {
+            flex-direction: row;
+            &.main-a {
+                margin-top: 50px;
+            }
+            .article {
+                width: 42%;
+                &.a,
+                &.d {
+                    width: 42%;
+                }
+                &.c,
+                &.b {
+                    width: 55%;
+                }
+            }
+        }
+        .article {
+            padding: 50px;
+            color: #fff;
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            & .title {
+                display: flex;
+                justify-content: center;
+                margin-top: 80px;
+            }
+            &.a {
+                background-size: cover;
+                background-position: center;
+                background-image: url(https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=723&q=80);
+            }
+            &.b {
+                background-size: cover;
+                background-position: center;
+                background-image: url(https://images.unsplash.com/photo-1521651201144-634f700b36ef?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8YW5pbWFsc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60);
+            }
+            &.c {
+                background-size: cover;
+                background-position: center;
+                background-image: url(https://images.unsplash.com/photo-1484712401471-05c7215830eb?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OXx8ZnVufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60);
+                // background-image: url(https://images.unsplash.com/photo-1511988617509-a57c8a288659?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8ZnVufGVufDB8MHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+            }
+            &.d {
+                background-size: cover;
+                background-position: center;
+                // background-image: url(https://images.unsplash.com/photo-1518949142393-f1d68174c92a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTd8fHBvb3IlMjBwZW9wbGV8ZW58MHx8MHw%3D&auto=format&fit=crop&w=700&q=60);
+                background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Helping_Needy_People_-_Makar_Sankranti_Observance_-_Babu_Ghat_Area_-_Kolkata_2018-01-14_6457.JPG/1200px-Helping_Needy_People_-_Makar_Sankranti_Observance_-_Babu_Ghat_Area_-_Kolkata_2018-01-14_6457.JPG);
+            }
+        }
+    }
+}

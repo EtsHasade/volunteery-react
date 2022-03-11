@@ -1,0 +1,97 @@
+.edit-page {
+    display: flex;
+    flex-direction: column;
+    & .edit-page-title {
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+        width: auto;
+    }
+    & .side-tabs {
+        * {
+            margin-bottom: 0;
+        }
+        & .title-tab {
+            padding: 0.5rem;
+            background-color: $gray4;
+            color: $gray3;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border: solid 1px $gray1;
+            border-bottom: none;
+            position: relative;
+            z-index: 99;
+        }
+        & .title-tab.active {
+            box-shadow: 0 1px 0px 0px $clr6;
+            color: $gray1;
+            background-color: $clr6;
+            background-image: none;
+        }
+    }
+    & .edit-form {
+        border: solid 1px $gray1;
+        padding: 0.5rem;
+        background-color: $clr6;
+        grid-row: 2;
+        grid-column: 2;
+        border-radius: 0.5rem;
+        border-top-left-radius: 0;
+        & .el-button {
+            background-color: $clr1;
+            border: $clr1;
+            &:hover {
+                background-color: #bfea45;
+                border: #bfea45;
+            }
+        }
+        & .el-input__inner,
+        & .el-textarea__inner {
+            text-align: left;
+            &:focus {
+                // border: 2px solid $clr7;
+                box-shadow: 0 0 0 1px $gray1;
+            }
+        }
+        & .slect-options-inputs {
+            @include for-normal-layout {
+                flex-direction: column;
+            }
+            &>* {
+                margin: 0 rem(5px) 0 rem(5px);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                @include for-normal-layout {
+                    flex-direction: row;
+                    &>* {
+                        margin: 0 rem(5px) 0 rem(5px);
+                    }
+                }
+            }
+        }
+        & .img-list {
+            & .imgs {
+                & img {
+                    object-fit: cover;
+                    max-width: rem(300px);
+                }
+                @include for-normal-layout {
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+        }
+        & .upload-img {
+            & i {
+                font-size: 110px;
+                color: #e6a23c;
+            }
+            & .img-uploader {
+                max-width: rem(150px);
+                height: rem(100px);
+            }
+        }
+    }
+}

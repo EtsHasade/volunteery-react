@@ -1,0 +1,15 @@
+// .el-rate_item {
+//     // &.el-icon-star-on {
+//     margin-right: 10px;
+//     // }
+// }
+.el-rate {
+    display: flex;
+}
+
+.el-rate__icon {
+    &.el-icon-star-on {
+        display: flex;
+        color: $clr1 !important;
+    }
+}

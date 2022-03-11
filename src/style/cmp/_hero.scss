@@ -1,0 +1,53 @@
+.hero {
+    height: $app-header-height;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.hero-page.hero {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url('@/assets/img/hero.jpg');
+
+    .title {
+        max-width: 505px;
+        color: #ffffff;
+        font-size: 1.6rem;
+        position: absolute;
+        right: 5vw;
+        top: 20vh;
+        padding: 1rem;
+        @include for-mobile-layout {
+            font-size: 1rem;
+            text-align: center;
+            padding: 5px;
+        }
+        h1 {
+            line-height: 1;
+        }
+        p {
+            font-size: 1.3rem;
+            line-height: 1.5;
+            max-width: 26ch;
+        }
+        .call-to-action {
+            cursor: pointer;
+            background-color: #bfea45;
+            color: #ffffff;
+            display: block;
+            width: fit-content;
+            padding: 0.8rem;
+            border-radius: 5px;
+            margin: 0;
+            transition: 0.3s;
+            h4 {
+                margin: 0;
+            }
+            &:hover {
+                color: #bfea45;
+                background-color: #ffffff;
+            }
+        }
+    }
+}

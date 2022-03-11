@@ -1,0 +1,8 @@
+.footer {
+    height: 40px;
+    background-color: $gray4;
+    font-size: rem(12px);
+    & * {
+        margin: 0 auto;
+    }
+}
